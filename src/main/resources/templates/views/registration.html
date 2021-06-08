@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/registration}" th:object="${person}">
+    <ul>
+        <li>
+            <label>
+                Ім я:
+                <input type="text" th:field="*{name}" required>
+            </label>
+        </li>
+        <li>
+            <label>
+                Прізвище:
+                <input type="text" th:field="*{surname}" required>
+            </label>
+        </li>
+        <li>
+            <label>
+                Логін:
+                <input type="text" th:field="*{login}" required>
+            </label>
+        </li>
+        <li>
+            <label>
+                Пароль:
+                <input type="password" th:field="*{password}" required>
+            </label>
+        </li>
+        <li>
+            <label>
+                Номер телефону:
+                <input type="text" th:field="*{phoneNumber}" required>
+            </label>
+        </li>
+        <li>
+            <label>
+                День народження:
+                <input type="date" th:field="*{birthDay}" required>
+            </label>
+        </li>
+    </ul>
+    <br>
+    <input type="submit" value="Зареэструвати!">
+</form>
+</body>
+</html>
